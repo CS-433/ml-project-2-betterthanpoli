@@ -1,0 +1,5 @@
+﻿Requirements:
+
+torch 2.0.1
+transformers 4.35.2
+flask 2.2.2
