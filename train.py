@@ -31,7 +31,7 @@ Returns:
     train_losses = []
     val_losses = []
 
-    # as a baseline, we compiute the loss of the model before training both on the training and validation data
+    # as a baseline, we compute the loss of the model before training both on the training and validation data
     model.eval()
     epoch_val_loss = []
     epoch_loss = []
