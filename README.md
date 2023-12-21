@@ -38,8 +38,11 @@ The project's codebase is structured across the following files and folder:
   - *Model Saving*: The trained model is saved to the specified path if it produces the lowest validation loss.
 
 **flask_chatbot**: The flask_chatbot folder contains all the necessary code to launch a local instance of the chatbot. The internal folders are organized according to Flask rules.  This structure includes key internal folders:
+
     - *Static Folder*: this is where all the JavaScript ('.js') and Cascading Style Sheets ('.css') files are stored. These files are essential for the aesthetic and functional aspects of the website's user interface.
+    
     - *Templates Folder*: this folder contains the HTML ('.html') files. These files define the layout and elements of the web pages.
+    
     - *App.py* : this script has a dual function. Firstly, it defines the routes for the front-end version of the bot. Secondly, it handles the internal computations of the chatbot. These computations are primarily based on the 'infer' function.
 
 
