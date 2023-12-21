@@ -34,7 +34,7 @@ The project's codebase is structured across the following files and folder:
   
   - *Model Saving*: The trained model is saved to the specified path if it produces the lowest validation loss.
 
-**test.py**: This file performs a comparison between the performances of the non fine-tuned model and the fine-tuned version. It just prints the average loss on the test set in both the cases. Before executing, please ensure that the weights are correctly loaded and stored, as we will explain in the "Model State Download" section.
+**test.py**: This file performs a comparison between the performances of the non fine-tuned model and the fine-tuned version. It just prints the average loss on the test set in both the cases. Before executing, please ensure that the weights are correctly loaded and stored, as we will explain in the 'Model State Download' subsection within the 'How to Start an Interactive Session with the Bot' section.
 
 **data**: The data folder contains the two dataset we used for our exmperiments. Specifically it contains the following files:
   - *comments_long.csv*: This .csv file contains all the comments extracted from the Washington Post's article regarding heat pumps. These comments have been specifically screened and included based on the condition that their length exceeds 20 characters.
