@@ -49,9 +49,9 @@ The project's codebase is structured across the following files and folder:
 
 # How to reproduce our experiments
 In order to reproduce our experiments it is necessary to excute the python script we provided in the following way:
-- **web_scraping.py** This program does not require any parameter. It will produce a 'comments_long.csv' file containing the preprocessed comments.
-- **topic_extraction.py** Similarly to the previous program, this one does not require the user to insert any parameter. Anyway it relies on the 'comments_long.csv' file we generated before, so it's important to be sure that this file is placed in the 'data' folder as it is in the repository.
-- **train.py** This script will reproduce the fine-tuning of our model. Considering it will produce the weights of the model, we ask the user to execute it passing the path of the folder in which he/she wants to save this weights. Please note that the '.pt' file's size will be around 2.88GB, so ensure to have enough available space. Here is an usage example " python train.py 'path/to/save/weights' "
+- **web_scraping.py**: This program does not require any parameter. It will produce a 'comments_long.csv' file containing the preprocessed comments.
+- **topic_extraction.py**: Similar to the previous program, this one does not require the user to input any parameters. However, it depends on the 'comments_long.csv' file we created earlier, so it is crucial to ensure that this file is located in the 'data' folder, as in the repository.
+- **train.py**: This script will reproduce the fine-tuning of our model. Considering it will produce the weights of the model, we ask the user to execute it passing the path of the folder in which he/she wants to save this weights. Please note that the '.pt' file's size will be around 2.88GB, so ensure to have enough available space. Here is an usage example " python train.py 'path/to/save/weights' "
 
 # How to start an interactive session with the bot
 
