@@ -17,7 +17,7 @@ model.resize_token_embeddings(len(tokenizer))
 model = model.to(device)
 
 # we load the fine-tuned model
-model.load_state_dict(torch.load("/mnt/storage_6TB/rfaro/chatBotModels/model_state_2_large_v2.pt"))
+model.load_state_dict(torch.load("model_state_2_large_v2.pt"))
 
 def infer(model, tokenizer, device, text):
     """
@@ -49,6 +49,9 @@ def chatbot_response():
     """
     if request.method == 'POST':
         user_input = request.get_json()['user_input']
+        # check the presence of the question mark
+        if user_input[-1] != "?":
+            user_input += "?"
         answer = infer(model, tokenizer, device, user_input)
         answer = answer.split(user_input)[1] # we remove the user input from the answer since the model start from the input repeating it
         return jsonify({'bot_response': answer})
