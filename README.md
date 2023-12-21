@@ -51,7 +51,7 @@ The project's codebase is structured across the following files and folder:
 In order to reproduce our experiments it is necessary to excute the python script we provided in the following way:
 - **web_scraping.py** This program does not require any parameter. It will produce a 'comments_long.csv' file containing the preprocessed comments.
 - **topic_extraction.py** Similarly to the previous program, this one does not require the user to insert any parameter. Anyway it relies on the 'comments_long.csv' file we generated before, so it's important to be sure that this file is placed in the 'data' folder as it is in the repository.
-- **train.py** This script will reproduce the fine-tuning of our model. Considering it will produce the weights of the model, we ask the user to execute it passing the path of the folder in which he/she wants to save this weights. Please note that the '.pt' file's size will be around 2.88GB, so ensure to have eneough available space. Here is an usage example " python train.py 'path/to/save/weights' "
+- **train.py** This script will reproduce the fine-tuning of our model. Considering it will produce the weights of the model, we ask the user to execute it passing the path of the folder in which he/she wants to save this weights. Please note that the '.pt' file's size will be around 2.88GB, so ensure to have enough available space. Here is an usage example " python train.py 'path/to/save/weights' "
 
 # How to start an interactive session with the bot
 
@@ -68,7 +68,7 @@ To successfully use this GPT-2 Chatbot Web Application, please follow these step
 
 - **Chatbot Interaction**:
 
-  The application will exetuce on localhost on the port 5002, hence you can access it just browsing the '127.0.0.1:5002' in your browser. Enter your question, and the chatbot will respond with generated answer based on your input.
+  The application will execute on localhost on the port 5002, hence you can access it just browsing the '127.0.0.1:5002' in your browser. Enter your question, and the chatbot will respond with generated answer based on your input.
   
   
 ## Requirements
