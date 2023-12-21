@@ -51,7 +51,7 @@ To successfully use this GPT-2 Chatbot Web Application, please follow these step
 
 - **Application Execution**:
 
-  Launch the Flask application by running the command python *app.py* in your terminal or command prompt. Once the application starts, it will be accessible through a web browser.
+  Launch the Flask application by running the file *app.py* in your terminal or command prompt. Once the application starts, it will be accessible through a web browser.
 
 - **Chatbot Interaction**:
 
