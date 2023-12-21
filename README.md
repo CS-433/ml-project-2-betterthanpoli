@@ -47,13 +47,19 @@ The project's codebase is structured across the following files and folder:
  - *App.py*: this script has a dual function. Firstly, its defines the routes for the front-end version of the bot. Secondly, it handles the internal computation of the chatbot. These computations are based on the 'infer' function.
 
 
-# Usage Instructions
+# How to reproduce our experiments
+In order to reproduce our experiments it is necessary to excute the python script we provided in the following way:
+- **web_scraping.py** This program does not require any parameter. It will produce a 'comments_long.csv' file containing the preprocessed comments.
+- **topic_extraction.py** Similarly to the previous program, this one does not require the user to insert any parameter. Anyway it relies on the 'comments_long.csv' file we generated before, so it's important to be sure that this file is placed in the 'data' folder as it is in the repository.
+- **train.py** This script will reproduce the fine-tuning of our model. Considering it will produce the weights of the model, we ask the user to execute it passing the path of the folder in which he/she wants to save this weights. Please note that the '.pt' file's size will be around 2.88GB, so ensure to have eneough available space. Here is an usage example " python train.py 'path/to/save/weights' "
+
+# How to start an interactive session with the bot
 
 To successfully use this GPT-2 Chatbot Web Application, please follow these steps:
 
 - **Model State Download**:
 
-  To obtain the required fine-tuned GPT-2 model state, 
+  To obtain the required fine-tuned GPT-2 model state you can download the weights from the following link. Alternatively, it is possible to reproduce them by executing the 'train.py' script previously discussed. Once you have the 'model_state_2_large_v2.pt' file, please ensure it is placed inside the 'flask_chatbot' folder. 
   
 
 - **Application Execution**:
@@ -62,7 +68,7 @@ To successfully use this GPT-2 Chatbot Web Application, please follow these step
 
 - **Chatbot Interaction**:
 
-  You can interact with the GPT-2 chatbot by navigating to the web interface provided by the application. Enter your text input, and the chatbot will respond with generated text based on your input.
+  The application will exetuce on localhost on the port 5002, hence you can access it just browsing the '127.0.0.1:5002' in your browser. Enter your question, and the chatbot will respond with generated answer based on your input.
   
   
 ## Requirements
