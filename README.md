@@ -34,7 +34,7 @@ The project's codebase is structured across the following files and folder:
   
   - *Model Saving*: The trained model is saved to the specified path if it produces the lowest validation loss.
 
-**test.py**: This file performs a comparison between the performances of the non fine-tuned model and the fine-tuned version. It just prints the average loss on the test set in both the cases. Before executing, please ensure that the weights are correctly loaded and stored, as we will explain in the 'Model State Download' subsection within the 'How to Start an Interactive Session with the Bot' section.
+**test.py**: This file performs a comparison between the performances of the non fine-tuned model and the fine-tuned version. It just prints the average loss on the test set in both the cases. Before executing, please ensure that the weights are correctly loaded and stored, as we will explain in the "Model State Download" section.
 
 **data**: The data folder contains the two dataset we used for our exmperiments. Specifically it contains the following files:
   - *comments_long.csv*: This .csv file contains all the comments extracted from the Washington Post's article regarding heat pumps. These comments have been specifically screened and included based on the condition that their length exceeds 20 characters.
@@ -68,11 +68,12 @@ To successfully use this GPT-2 Chatbot Web Application, please follow these step
 
 - **Application Execution**:
 
-  Launch the Flask application by running the file *app.py* in your terminal or command prompt. Once the application starts, it will be accessible through a web browser.
+  Launch the Flask application by running the file *app.py* in your terminal or command prompt inside the main folder. Since, as we said, you have to be in main folder when executing the command, the usage example is the following:
+  " python flask_chatbot/app.py "
 
 - **Chatbot Interaction**:
 
-  The application will execute on localhost on the port 5002, hence you can access it just browsing the '127.0.0.1:5002' in your browser. Enter your question, and the chatbot will respond with generated answer based on your input.
+  The application will execute on localhost on the port 5002, hence you can access it just browsing the '127.0.0.1:5002' in your web browser. Enter your question, and the chatbot will respond with generated answer based on your input.
   
   
 ## Requirements
