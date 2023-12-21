@@ -26,7 +26,7 @@ def preprocess_text(sentences):
 
 # We load the data stored in a csv file and preprocess it
 print("Loading and preprocessing data...")
-df = pd.DataFrame(pd.read_csv("comments_long.csv"))
+df = pd.DataFrame(pd.read_csv("data/comments_long.csv"))
 l = list(df["Comments"])
 processed_documents = preprocess_text(l)
 print("Data loaded and preprocessed")

@@ -98,7 +98,7 @@ if __name__ == "__main__":
     print("Model loaded!")
 
     # load the dataset and split it into training, validation and test sets
-    data_path = "qa_heatpumps_2-2.csv"
+    data_path = "data/qa_heatpumps_2-2.csv"
     chatData = DatasetChatbot(data_path, tokenizer)
     trainData, testData = train_test_split(chatData, test_size=0.4, random_state=42)
     valData, testData = train_test_split(testData, test_size=0.2, random_state=42)

@@ -21,9 +21,6 @@ The project's codebase is structured across the following files and folder:
   
   - *Topic Modeling*: An instance of the BERTopic model is created and fitted to the preprocessed text data. The "all-MiniLM-L6-v2" embedding model is utilized for indentify and extract topics from the data.
 
-**comments_long.csv**: This .csv file contains all the comments extracted from the Washington Post's article regarding heat pumps. These comments have been specifically screened and included based on the condition that their length exceeds 20 characters.
-
-**qa_heatpumps_2.csv**: This .csv file contains the synthetic dataset we use for fine-tuning our model. Each row represents a pair of question and answer, following the format: "questions" ; "answer". 
 
 **DatasetChatbot.py**: This file defines a custom dataset class to be used for the training of the chatbot model. It reads data from a CSV file with question and answer columns, tokenizes the text using the specified tokenizer (that will be specified in the "train.py" file), and prepares the data for model input. It also ensures that the input sequences are appropriately formatted for the chatbot model.
 
@@ -36,6 +33,11 @@ The project's codebase is structured across the following files and folder:
   - *Training Loop*: The code includes a training loop that fine-tunes the model. It tracks training and validation losses over epochs.
   
   - *Model Saving*: The trained model is saved to the specified path if it produces the lowest validation loss.
+
+**data**: The data folder contains the two dataset we used for our exmperiments. Specifically it contains the following files:
+  - *comments_long.csv*: This .csv file contains all the comments extracted from the Washington Post's article regarding heat pumps. These comments have been specifically screened and included based on the condition that their length exceeds 20 characters.
+
+  - *qa_heatpumps_2.csv*: This .csv file contains the synthetic dataset we use for fine-tuning our model. Each row represents a pair of question and answer, following the format: "questions" ; "answer". 
 
 **flask_chatbot**: The flask_chatbot folder contains all the necessary code to launch a local instance of the chatbot. The internal folders are organized according to Flask rules.  This structure includes key internal folders:
 
