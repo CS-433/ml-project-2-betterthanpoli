@@ -13,13 +13,13 @@
 # Codebase
 The project's codebase is structured across the following files and folder:
 
-**web_scraping.py**: This file contains the code to scrape all the comments from the Washington Post's article. After identified all the comments, we applied some manipulations on them in order to separate them and keep only the comments with a lenght greater than 20 character. 
+**web_scraping.py**: This file contains the code to scrape all the comments from the Washington Post's article. 
 
 **topic_extraction.py**: This script performs topic modeling on text data related to heat pumps using the BERTopic library. The code is organized in the following way: 
 
   - *Data Preprocessing*: The code begins by loading and preprocessing data from a CSV file ("comments_long.csv"). It employs spaCy for lemmatization and stopwords removal to prepare the text data for analysis.
   
-  - *Topic Modeling*: An instance of the BERTopic model is created and fitted to the preprocessed text data. The "all-MiniLM-L6-v2" embedding model is utilized for indentify and extract topics from the data.
+  - *Topic Modeling*: An instance of the BERTopic model is created and fitted to the preprocessed text data. The "all-MiniLM-L6-v2" embedding model is utilized to extract topics from the data.
 
 
 **DatasetChatbot.py**: This file defines a custom dataset class to be used for the training of the chatbot model. It reads data from a CSV file with question and answer columns, tokenizes the text using the specified tokenizer (that will be specified in the "train.py" file), and prepares the data for model input. It also ensures that the input sequences are appropriately formatted for the chatbot model.
@@ -34,10 +34,10 @@ The project's codebase is structured across the following files and folder:
   
   - *Model Saving*: The trained model is saved to the specified path if it produces the lowest validation loss.
 
-**test.py**: This file performs a comparison between the performances of the non fine-tuned model and the fine-tuned version. It just prints the average loss on the test set in both the cases. Before executing, please ensure that the weights are correctly loaded and stored, as we will explain in the "Model State Download" section.
+**test.py**: This file performs a comparison between the performances of the non fine-tuned model and the fine-tuned version. It just prints the average loss on the test set in both cases. Before executing, please ensure that the weights are correctly loaded and stored, as we will explain in the "Model State Download" section.
 
 **data**: The data folder contains the two dataset we used for our exmperiments. Specifically it contains the following files:
-  - *comments_long.csv*: This .csv file contains all the comments extracted from the Washington Post's article regarding heat pumps. These comments have been specifically screened and included based on the condition that their length exceeds 20 characters.
+  - *comments_long.csv*: This .csv file contains all the comments longer than 20 characters extracted from the Washington Post's article regarding heat pumps. 
 
   - *qa_heatpumps_2.csv*: This .csv file contains the synthetic dataset we use for fine-tuning our model. Each row represents a pair of question and answer, following the format: "questions" ; "answer". 
 
